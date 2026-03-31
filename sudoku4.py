@@ -11,8 +11,9 @@ class ClingoApp(clingo.application.Application):
         ctl.solve()
 
     def print_model(self, model, printer):
-        symbols = sorted(model.symbols(shown=True))
-        print(" ".join(str(s) for s in symbols))
+        s = Sudoku.from_model(model).__str__()
+
+        print(s)
         sys.stdout.flush()
 
     
