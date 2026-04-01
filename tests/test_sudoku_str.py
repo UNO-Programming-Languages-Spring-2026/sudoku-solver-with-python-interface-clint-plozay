@@ -13,3 +13,5 @@ class TestSudokuStr(unittest.TestCase):
             s2 = [line.strip() for line in str(sudoku).strip().splitlines()]
             s3 = [line.strip() for line in s.strip().splitlines()]
             self.assertEqual(s2, s3)
+
+    
